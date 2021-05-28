@@ -1,0 +1,11 @@
+I=imread('estrella1.bmp');
+A=[1 0 320;0 1 240;0 0 1];
+B=[0.707 -0.707 0;0.707 0.707 0;0 0 1]; 
+C=[1 0 -320;0 1 -240;0 0 1];
+D=A*B*C;
+TA=Transforma(I,A);
+TB=Transforma(TA,B);
+TC=Transforma(TB,C);
+subplot(1,3,1),imshow(TA), title('Primera transformada');
+subplot(1,3,2),imshow(TB), title('Segunda transformada');
+subplot(1,3,3),imshow(TC), title('Tercera transformada');
